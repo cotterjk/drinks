@@ -1,0 +1,30 @@
+h1 {
+
+}
+
+p {
+
+}
+
+iframe {
+     width: 100%;
+     border: none;
+}
+
+.text-column {
+    max-width: 740px;
+    width: 66%;
+    margin: auto;
+}
+
+.logo-container {
+    display: block;
+    width: 10%;
+    margin: 64px auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 80px;
+}
