@@ -1,3 +1,6 @@
+body {
+}
+
 h1 {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 34px;
@@ -12,23 +15,34 @@ p {
     line-height: 1.58;
     font-weight:400;
     margin-top: 21px;
-    overflow-wrap: break-word;
-    word-break: break-word;
 ;
 }
 
+.data-column {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 44%;
+    position: relative;
+}
+
+
 iframe {
-     width: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+iframe > html {
+    width: 50%;
 }
 
 .text-column {
     max-width: 740px;
     width: 66%;
-    margin: auto;
-}
-
-.data-column {
-    width: 85%;
     margin: auto;
 }
 
