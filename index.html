@@ -9,8 +9,7 @@
 </head>
 <body>
     <div class="text-column">
-        <h1>Drinks</h1>
-        <h2>I need a drink</h2>
+        <h1>I need a drink</h1>
         <p>Between work and leisure, I spend a fair amount of time modifying my energy, attention, and mood with (legal, acceptable) substances. This appears to be a pillar of many adults’ routines.<p>
 
         <p>Since September 2018, (when I started my first full-time job after graduation,) I've been noting every <span class="coffee">coffee</span> and <span class="wine">alcoholic</span> drink I've had by the hour in which it was mostly consumed.</p>
@@ -24,7 +23,15 @@
     </div>
     <div class="text-column">
         <h2>How's this work?</h2>
-        <p>Implementation notes:... reads from Google sheets, updates live, etc.</p>
+        <p><em><strong>TL:DR:</strong> D3.js in a Google Apps script combing through a Google Sheet, embedded here with an IFrame.
+</em></p>
+        <p>This page is written from scratch in simple html, uploaded as a repository to my Github and displayed like this using the Pages feature. The heatmap page sits inside an IFrame on this page. (IFrames, or inline frames, essentially embed another separate html document in this one.)</p>
+
+        <p>The heatmap is being drawn by a web app—a published script attached to a Google Sheets spreadsheet. (This web app is what the IFrame is embedding.) The spreadsheet is two columns: every hour as a datetime value, and next to it, an “o” if a coffee drink was consumed, an “x” if an alcoholic drink was consumed. (Other values are error-coded to display as neon green dots, in case I enter an unrecognized value into that second column, I’ll really know.)</p>
+
+        <p>This is live and ongoing. I still manually mark every drink in the spreadsheet. The dots’ placements are calculated horizontally by hour, vertically by day since I started tracking. In this one-week view, each week is layered, each day rolls around and overlaps—a textbook example of modular arithmetic intuition.</p>
+
+        <p>The opacity of each dot is divided by the number of weeks since I’ve started tracking, until today. As weeks pass, each drink contributes less and less of a mark, and the aggregate becomes more impressionistic.</p>
         <h2>What'd I see new?</h2>
         <p>(If you look closely, you'll see I had a beer at 11am on a Friday once. I was the best man in a wedding.)</p>
   </div>
