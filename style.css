@@ -36,10 +36,6 @@ iframe {
 
 }
 
-iframe > html {
-    width: 50%;
-}
-
 .text-column {
     max-width: 740px;
     width: 66%;
