@@ -25,18 +25,25 @@
         </iframe>
     </div>
     <div class="text-column">
-        <h2>How's this work?</h2>
+        <h2>What am I looking at?</h2>
         <p><em><strong>TL;DR:</strong> D3.js in a Google Apps script combing through a Google Sheet, embedded here with an IFrame.
 </em></p>
-        <p>This page is written from scratch in simple html, uploaded as a repository to my Github and displayed like this using the Pages feature. The heatmap page sits inside an IFrame on this page. (IFrames, or inline frames, essentially embed another separate html document in this one.)</p>
+        <p>This page is written from scratch in simple html, uploaded as a repository to my Github and displayed like this using the Pages feature. The heatmap page sits inside an IFrame on this page. (IFrames, or inline frames, are essentially 'holes' in webpages that display another independent page.)</p>
 
-        <p>The heatmap is being drawn by a web app—a published script attached to a Google Sheets spreadsheet. (This web app is what the IFrame is embedding.) The spreadsheet is two columns: every hour as a datetime value, and next to it, an “o” if a coffee drink was consumed, an “x” if an alcoholic drink was consumed. (Other values are error-coded to display as neon green dots, in case I enter an unrecognized value into that second column, I’ll really know.)</p>
+        <p>The heatmap appears on that independent page. It's being drawn by a web app—a published script attached to a Google Sheets spreadsheet. The spreadsheet is two columns: every hour as a datetime value, and next to it, an <span class="coffee">o</span> if a coffee drink was consumed, an <span class="wine">x</span> if an alcoholic drink was consumed. (Other values are error-coded to display as neon green dots, in case I enter an unrecognized value into that second column, I’ll really know.)</p>
 
-        <p>This is live and ongoing. I still manually mark every drink in the spreadsheet. The dots’ placements are calculated horizontally by hour, vertically by day since I started tracking. In this one-week view, each week is layered, each day rolls around and overlaps—a textbook example of modular arithmetic intuition.</p>
+        <p>This is live and ongoing. I still manually mark every drink in the spreadsheet. The dots’ placements are calculated horizontally by hour, vertically by day since I started tracking. In this one-week view, each week is layered, each day rolls around each week and overlaps—a textbook example of modular arithmetic intuition.</p>
 
         <p>The opacity of each dot is divided by the number of weeks since I’ve started tracking, until today. As weeks pass, each drink contributes less and less of a mark, and the aggregate becomes more impressionistic.</p>
-        <h2>What'd I see new?</h2>
-        <p>(If you look closely, you'll see I had a beer at 11am on a Friday once. I was the best man in a wedding.)</p>
+        <h2>What did I see new?</h2>
+
+        <p>I most consistently drink <span class="coffee">coffee</span> at 8am on weekdays. (Usually, the first thing I do when I get into work is make a pot for the office.) I usually have <span class="coffee">another</span> in the next two hours, and sometimes a <span class="coffee">pick-up</span> in the early afternoon. I was expecting to see a browner concentration on Mondays, but it looks like I stay pretty consistent. On weekends, I sleep in and often make some at home.</p>
+
+        <p>Friday after-work <span class="wine">happy hours</span> have become a tradition, and it's made its mark. Otherwise I'll have a <span class="wine">drink</span> around 8 or 9 most weeknights.</p>
+
+        <p>(If you look closely, you might see a <span class="wine">beer</span> at 11am on a Friday. I was the best man in a wedding.)</p>
+
+        <p>When I started recording, I was imagining more overlap—an occasional <span class="wine">eye-opener</span> or some <span class="coffee">midnight oil</span>—and the <span class="coffee">coffee</span> and <span class="wine">wine</span> colors would blend into unexpected mixtures. Maybe it's best that my <span class="coffee">pushes</span> and <span class="wine">pulls</span> remain in their expected times of day.</p>
   </div>
   <div class="logo-container">
       <a href="https://cotterkoopman.com/">
