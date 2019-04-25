@@ -1,5 +1,9 @@
-body {
+html {
+    height: 100%;
+}
 
+body {
+    height: 100%;
 }
 
 h1 {
@@ -23,19 +27,18 @@ p {
     width: 85%;
     margin: auto;
     overflow: hidden;
-    padding-top: 44%;
     position: relative;
+    height: 100%;
 }
 
 
 iframe {
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 12%;
     left: 0;
     border: 0px;
-    background-color;
 
 }
 
