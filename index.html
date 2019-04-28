@@ -9,7 +9,7 @@
 </head>
 <body onresize='resizeChart()'>
     <div class="data-column">
-        <iframe id="chart" src="https://script.google.com/macros/s/AKfycbz4jzzH3Y2WL_LmaJZ3XqmHHiHg8AAKnXXXldH9tdJPP64_D2U/exec">
+        <iframe id="chart" src="https://script.google.com/macros/s/AKfycby-gZzrza2cZoUbB9ISoK8paEnPOvIxJNfJx_WyzaU/exec">
         </iframe>
     </div>
     <div class="text-column">
@@ -22,16 +22,16 @@
 
         <p>I wanted to see a heatmapped routine of the ways I push and pull into focus, attention, and candor.</p>
 
-        <h2>What am I looking at?</h2>
+        <h2>How does code display this?</h2>
         <p><em><strong>TL;DR:</strong> D3.js in a Google Apps script combing through a Google Sheet, embedded here with an IFrame.
 </em></p>
         <p>This page is written from scratch in simple html, uploaded as a repository to my Github and displayed like this using the Pages feature. The heatmap page sits inside an IFrame on this page. (IFrames, or inline frames, are essentially 'holes' in webpages that display another independent page.)</p>
 
-        <p>The heatmap appears on that independent page. It's being drawn by a web app—a published script attached to a Google Sheets spreadsheet. The spreadsheet is two columns: every hour as a datetime value, and next to it, an <span class="coffee">o</span> if a coffee drink was consumed, an <span class="wine">x</span> if an alcoholic drink was consumed. (Other values are error-coded to display as neon green dots, in case I enter an unrecognized value into that second column, I’ll really know.)</p>
+        <p>The heatmap is being drawn by a web app—a published script attached to a Google Sheets spreadsheet. The spreadsheet is two columns: every hour as a datetime value, and next to it, an <span class="coffee">o</span> if a coffee drink was consumed, an <span class="wine">x</span> if an alcoholic drink was consumed. (Other values are error-coded to display as neon green dots, in case I enter an unrecognized value into that second column, I’ll really know.)</p>
 
         <p>This is live and ongoing. I still manually mark every drink in the spreadsheet. The dots’ placements are calculated horizontally by hour, and vertically by day since I started tracking. In this one-week view, each week is layered, as each day rolls around each week and overlaps—a textbook example of modular arithmetic intuition.</p>
 
-        <p>The opacity of each dot is divided by the number of weeks since I’ve started tracking, until today. As weeks pass, each drink contributes less and less of a mark, and the aggregate becomes more impressionistic.</p>
+        <p>The opacity of each dot is 100% divided by the number of weeks since I’ve started tracking, until today. As weeks pass, each drink contributes less and less of a mark, and the aggregate becomes more impressionistic.</p>
         <h2>What did I see new?</h2>
 
         <p>I most consistently drink <span class="coffee">coffee</span> at 8am on weekdays. (Usually, the first thing I do when I get into work is make a pot for the office.) I usually have <span class="coffee">another</span> in the next two hours, and sometimes a <span class="coffee">pick-up</span> in the early afternoon. I was expecting to see a browner concentration on Mondays, but it looks like I stay pretty consistent. On weekends, I sleep in and often make some at home.</p>
