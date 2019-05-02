@@ -11,6 +11,7 @@ h1 {
     font-size: 34px;
     font-weight:400;
     color: rgba(0, 0, 0, 0.84);
+    padding-top: 60px;
 }
 
 p {
@@ -27,17 +28,17 @@ p {
     width: 85%;
     margin: auto;
     overflow: hidden;
-    position: relative;
     height: 100%;
+
 }
 
 
 iframe {
-    height: 100%;
     width: 100%;
+    height: 42vw;
     position: relative;
-    top: 12%;
-    left: 0;
+    top: 50%;
+    transform: translate(0, -55%);
     border: 0px;
 
 }
@@ -68,10 +69,26 @@ img {
     color: #8B008B;
 }
 
-svg {
+svg.logo {
     stroke: #A0522D;
 }
 
-svg:hover {
+svg.logo:hover {
     stroke: #8B008B;
+}
+
+.down-arrow-container {
+    position: absolute;
+    left:50%;
+    bottom:10px;
+    height: 40px;
+    width: 40px;
+}
+
+svg.down-arrow {
+    fill: #A0522D;
+}
+
+svg.down-arrow:hover {
+    fill: #8B008B;
 }
