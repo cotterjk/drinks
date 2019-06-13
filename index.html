@@ -81,14 +81,14 @@
 var currentWidth = -999.0;
 function getWidth() {
     currentWidth = document.body.clientWidth;
-    console.log("width stored: " + currentWidth);
+    // console.log("width stored: " + currentWidth);
 }
 
 var myIframe=document.getElementById('chart');
 function resizeChart() {
-    console.log("resizeChart called")
+    // console.log("resizeChart called")
     if (document.body.clientWidth != currentWidth) {
-        console.log("resizing!")
+        // console.log("resizing!")
         //Reload iframe src, so that it resize according to the iframe's aspect ratio
         myIframe.src=myIframe.src;
         //Re-store width for later resizings
