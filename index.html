@@ -7,7 +7,7 @@
      <link rel="stylesheet" type="text/css" href="style.css">
   <title>DJ.1 : Drinks</title>
 </head>
-<body onresize='resizeChart()'>
+<body onresize='resizeChart()' onload='getWidth()'>
     <div class="data-column">
         <iframe id="chart" src="https://script.google.com/macros/s/AKfycbz4jzzH3Y2WL_LmaJZ3XqmHHiHg8AAKnXXXldH9tdJPP64_D2U/exec">
         </iframe>
@@ -19,7 +19,7 @@
         <h1>I need a drink</h1>
         <p>Between work and leisure, I spend a fair amount of time modifying my energy, attention, and mood with (legal, acceptable) substances. This appears to be a pillar of many adults’ routines.<p>
 
-        <p>Since September 2018, (when I started my first full-time job after graduation,) I've been noting every <span class="coffee">coffee</span> and <span class="wine">alcoholic</span> drink I've had by the hour in which it was mostly consumed.</p>
+        <p>Since September 2018, (when I started my first full-time job after graduation,) I've been noting every <span class="coffee">coffee</span> and <span class="wine">alcoholic</span> drink I've had by the hour in which it was mostly consumed.</p>
 
         <p>(This timing and what amount constitutes "one drink" is fungible. This is soft and round personal data.)</p>
 
@@ -78,10 +78,22 @@
   </div>
 </body>
 <script>
+var currentWidth = -999.0;
+function getWidth() {
+    currentWidth = document.body.clientWidth;
+    console.log("width stored: " + currentWidth);
+}
+
 var myIframe=document.getElementById('chart');
-    function resizeChart() {
-        console.log("resizeChart called")
+function resizeChart() {
+    console.log("resizeChart called")
+    if (document.body.clientWidth != currentWidth) {
+        console.log("resizing!")
+        //Reload iframe src, so that it resize according to the iframe's aspect ratio
         myIframe.src=myIframe.src;
+        //Re-store width for later resizings
+        getWidth();
     }
+}
 </script>
 </html>
