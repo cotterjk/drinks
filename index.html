@@ -10,7 +10,7 @@
 <body onresize='resizeChart()' onload='getWidth()'>
     <div class="data-column">
         <svg id="load-dot-svg">
-            <circle id="load-dot-circle"/>
+            <circle id="load-dot-circle" class="load-dot-circle-animation"/>
         </svg>
         <iframe id="chart" src="https://script.google.com/macros/s/AKfycbz4jzzH3Y2WL_LmaJZ3XqmHHiHg8AAKnXXXldH9tdJPP64_D2U/exec">
         </iframe>
@@ -82,6 +82,9 @@
 </body>
 <script>
 var currentWidth = -999.0;
+var loader = document.getElementById("load-dot-circle");
+var loader2 = loader;
+var target = document.getElementById('chart');
 function getWidth() {
     currentWidth = document.body.clientWidth;
     // console.log("width stored: " + currentWidth);
@@ -94,8 +97,14 @@ function resizeChart() {
         // console.log("resizing!")
         //Reload iframe src, so that it resize according to the iframe's aspect ratio
         myIframe.src=myIframe.src;
+        loader=loader;
         //Re-store width for later resizings
         getWidth();
+
+// Remove animation-causing class, then re-add it after 1 sec to re-trigger animation.
+        loader.classList.remove('load-dot-circle-animation');
+        setTimeout(function(){loader.classList.add('load-dot-circle-animation');}, 1000);
+
     }
 }
 </script>
