@@ -33,9 +33,49 @@ p {
     margin: auto;
     overflow: hidden;
     height: 100%;
-
 }
 
+#load-dot-svg {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    /* center div by moving back half its width and height*/
+    transform: translate(-50px, -50px);
+    z-index: 100;
+}
+
+#load-dot-circle {
+    fill: transparent;
+    cx:50%;
+    cy:50%;
+    r: 25;
+
+
+    animation-name: load-pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-play-state: running;
+}
+
+@keyframes load-pulse {
+  0% {
+    fill: transparent;
+  }
+  33% {
+    fill: #A0522D;
+  }
+  66% {
+    fill: transparent;
+  }
+  100% {
+    fill: #8B008B;
+  }
+}
 
 iframe {
     width: 100%;
@@ -82,12 +122,31 @@ svg.logo:hover {
 }
 
 .down-arrow-container {
+    opacity:0;
     position: absolute;
     left:50%;
     bottom:10px;
     height: 40px;
     width: 40px;
+
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    animation-duration:2s;
+
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
 }
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 svg.down-arrow {
     fill: #A0522D;
